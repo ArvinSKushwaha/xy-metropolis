@@ -1,0 +1,43 @@
+[project]
+name = "xy-metropolis"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Arvin Kushwaha", email = "arvin.singh.kushwaha@gmail.com" }
+]
+dependencies = [
+    "jax[cuda12]>=0.4.35",
+    "jaxtyping>=0.2.36",
+    "polars>=1.16.0",
+    "matplotlib-backend-sixel>=0.1.0",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+license = { text = "MIT" }
+
+[tool.rye]
+managed = true
+virtual = true
+dev-dependencies = []
+
+[tool.ruff]
+target-version = "py312"
+
+[tool.ruff.lint.isort]
+lines-between-types = 1
+relative-imports-order = "closest-to-furthest"
+
+[tool.ruff.format]
+quote-style = "single"
+docstring-code-format = true
+
+[tool.basedpyright]
+typeCheckingMode = "strict"
+reportMissingTypeStubs = false
+reportUnknownParameterType = false
+reportUnknownArgumentType = false
+reportUnknownMemberType = false
+reportUnknownVariableType = false
+reportUnknownLambdaType = false
+reportUntypedFunctionDecorator = false
+reportMissingTypeArgument = false
