@@ -24,6 +24,7 @@ for length in L:
 
     plt.plot(1 / betas, heat_capacity, label=f'{length}')
 
+plt.axvline(1.043)
 plt.xlabel(r'$T$')
 plt.ylabel(r'$C_V / L^2 = \beta^2 (\langle E^2 \rangle - \langle E \rangle^2) / L^2$')
 plt.legend()
